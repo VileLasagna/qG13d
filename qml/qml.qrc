@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>FilePicker.qml</file>
+        <file>KeysPage.qml</file>
+        <file>MacrosPage.qml</file>
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>ScreenPage.qml</file>
+    </qresource>
+</RCC>
