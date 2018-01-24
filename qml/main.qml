@@ -6,8 +6,8 @@ import QtQuick.Dialogs 1.2
 ApplicationWindow {
     id: window
     visible: true
-    width: 800
-    height: 600
+    width: 900
+    height: 1000
     title: qsTr("G13d Config GUI")
 
     header: ToolBar
@@ -27,10 +27,12 @@ ApplicationWindow {
             TabBar
             {
                 id: pageTabs
-                anchors.top: parent.top
-                anchors. bottom: parent.bottom
+                //anchors.top: parent.top
+                contentHeight: toolButton.implicitHeight
+
+                anchors. bottom: toolButton.bottom
                 anchors.left: toolButton.right
-                anchors.right: parent.right
+                //anchors.right: parent.right
                 TabButton
                 {
                     text: "Keys"
