@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>application_button.png</file>
+        <file>G13_minijoystick_overlay.png</file>
+        <file>G13_thumbnail_normal.png</file>
+        <file>G13device.png</file>
+        <file>G13keys.png</file>
+        <file>mkey_active.png</file>
+        <file>mkey_normal.png</file>
+        <file>pulseglow_home_gkey.png</file>
+        <file>pulseglow_home_lcd.png</file>
+        <file>pulseglow_home_mkey.png</file>
+        <file>pulseglow.png</file>
+        <file>togo_G13.png</file>
+    </qresource>
+</RCC>
