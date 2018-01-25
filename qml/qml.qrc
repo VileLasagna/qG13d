@@ -6,5 +6,6 @@
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>ScreenPage.qml</file>
+        <file>G13Layout.qml</file>
     </qresource>
 </RCC>
