@@ -14,6 +14,7 @@ Item {
 
     width: deviceImage.implicitWidth
 
+    signal buttonClicked(string buttonID)
 
     Image
     {
@@ -63,6 +64,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
+            onClicked: g13.buttonClicked("G1")
 
         }
 
@@ -94,7 +96,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G2")
         }
 
         Label
@@ -125,7 +127,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G3")
         }
 
         Label
@@ -156,7 +158,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G4")
         }
 
         Label
@@ -187,7 +189,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G5")
         }
 
         Label
@@ -218,7 +220,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G6")
         }
 
         Label
@@ -249,7 +251,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G7")
         }
 
         Label
@@ -288,7 +290,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G8")
         }
 
         Label
@@ -319,7 +321,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G9")
         }
 
         Label
@@ -350,7 +352,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G10")
         }
 
         Label
@@ -381,7 +383,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G11")
         }
 
         Label
@@ -412,7 +414,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G12")
         }
 
         Label
@@ -443,7 +445,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G13")
         }
 
         Label
@@ -474,7 +476,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G14")
         }
 
         Label
@@ -515,7 +517,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G15")
         }
 
         Label
@@ -546,7 +548,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G16")
         }
 
         Label
@@ -577,7 +579,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G17")
         }
 
         Label
@@ -608,7 +610,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G18")
         }
 
         Label
@@ -639,7 +641,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G19")
         }
 
         Label
@@ -679,7 +681,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G20")
         }
 
         Label
@@ -710,7 +712,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G21")
         }
 
         Label
@@ -741,7 +743,7 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             propagateComposedEvents: true
-
+            onClicked: g13.buttonClicked("G22")
         }
 
         Label
