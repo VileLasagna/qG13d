@@ -11,6 +11,7 @@ Item {
     property string logitecBlue: "#00A7E0"
     property double buttonGlowRadius: 4
     property double buttonGlowThickness: 5
+    property double stickBtnRadius: 20 * imageScale
 
     width: deviceImage.implicitWidth
 
@@ -42,6 +43,335 @@ Item {
     }
 
     ///Buttons start here
+
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //        LED INTERFACE BUTTONS: BD, L1->L4, LIGHT_STATE
+    //
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : bdarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius* 5
+        id: bdrect
+        MouseArea
+        {
+            id:bdarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("BD")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "BD"
+            color: bdarea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius * 1.5
+        width: stickBtnRadius * 1.5
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * -0.253
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.34
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : l1area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: l1rect
+        MouseArea
+        {
+            id:l1area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("L1")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "L1"
+            color: l1area.containsMouse ? logitecBlue : "white"
+        }
+        height: 15 * imageScale
+        width: 45 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * -0.13
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.34
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : l2area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: l2rect
+        MouseArea
+        {
+            id:l2area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("L2")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "L2"
+            color: l2area.containsMouse ? logitecBlue : "white"
+        }
+        height: 15 * imageScale
+        width: 45 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * -0.045
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.34
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : l3area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: l3rect
+        MouseArea
+        {
+            id:l3area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("L3")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "L3"
+            color: l3area.containsMouse ? logitecBlue : "white"
+        }
+        height: 15 * imageScale
+        width: 45 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.045
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.34
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : l4area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: l4rect
+        MouseArea
+        {
+            id:l4area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("L4")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "L4"
+            color: l4area.containsMouse ? logitecBlue : "white"
+        }
+        height: 15 * imageScale
+        width: 45 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.13
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.34
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : lsarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius * 5
+        id: lsrect
+        MouseArea
+        {
+            id:lsarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("LIGHT_STATE")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "LS"
+            color: lsarea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius * 1.5
+        width: stickBtnRadius * 1.5
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.253
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.34
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //        MACRO PROFILE BUTTONS: M1->M3 + MR
+    //
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : m1area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: m1rect
+        MouseArea
+        {
+            id:m1area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("M1")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "M1"
+            color: m1area.containsMouse ? logitecBlue : "white"
+        }
+        height: 30 * imageScale
+        width: 75 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * -0.215
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.293
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : m2area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: m2rect
+        MouseArea
+        {
+            id:m2area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("M2")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "M2"
+            color: m2area.containsMouse ? logitecBlue : "white"
+        }
+        height: 30 * imageScale
+        width: 84 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * -0.076
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.293
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : m3area.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: m3rect
+        MouseArea
+        {
+            id:m3area
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("M3")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "M3"
+            color: m3area.containsMouse ? logitecBlue : "white"
+        }
+        height: 30 * imageScale
+        width: 84 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.075
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.293
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : mrarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: mrrect
+        MouseArea
+        {
+            id:mrarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("MR")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "MR"
+            color: mrarea.containsMouse ? logitecBlue : "white"
+        }
+        height: 30 * imageScale
+        width: 75 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.217
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * -0.293
+    }
+
 
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
@@ -760,4 +1090,234 @@ Item {
         anchors.verticalCenter: deviceImage.verticalCenter
         anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.003
     }
+
+
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+    //
+    //         STICK AREA
+    //
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : leftarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: leftrect
+        MouseArea
+        {
+            id:leftarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("LEFT")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: leftarea.containsMouse ? logitecBlue : "white"
+        }
+        height: 93 * imageScale
+        width: 37 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.265
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.105
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : downarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius
+        id: downrect
+        MouseArea
+        {
+            id: downarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("DOWN")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: downarea.containsMouse ? logitecBlue : "white"
+        }
+        height: 46 * imageScale
+        width: 62 * imageScale
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.358
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.187
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : tophatarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius*2
+        id: tophatrect
+        MouseArea
+        {
+            id:tophatarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("TOP")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: tophatarea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius
+        width: stickBtnRadius
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.4
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.086
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : stickuparea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius*2
+        id: stickuprect
+        MouseArea
+        {
+            id:stickuparea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("STICK_UP")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: stickuparea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius
+        width: stickBtnRadius
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.4
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.055
+    }
+
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : stickleftarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius*2
+        id: stickleftrect
+        MouseArea
+        {
+            id:stickleftarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("STICK_LEFT")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: stickleftarea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius
+        width: stickBtnRadius
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.361
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.086
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : stickdownarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius*2
+        id: stickdownrect
+        MouseArea
+        {
+            id:stickdownarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("STICK_DOWN")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: stickdownarea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius
+        width: stickBtnRadius
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.4
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.12
+    }
+
+    Rectangle
+    {
+        color: "transparent"
+        border.color: debugDraw ? "yellow" : stickrightarea.containsMouse ? logitecBlue : "transparent"
+        border.width: buttonGlowThickness
+        radius: buttonGlowRadius*2
+        id: stickrightrect
+        MouseArea
+        {
+            id:stickrightarea
+            anchors.fill: parent
+            hoverEnabled: true
+            propagateComposedEvents: true
+            onClicked: g13.buttonClicked("STICK_RIGHT")
+        }
+
+        Label
+        {
+            anchors.centerIn:parent
+            text: "."
+            color: stickrightarea.containsMouse ? logitecBlue : "white"
+        }
+        height: stickBtnRadius
+        width: stickBtnRadius
+
+        anchors.horizontalCenter: deviceImage.horizontalCenter
+        anchors.horizontalCenterOffset: deviceImage.paintedWidth * 0.439
+        anchors.verticalCenter: deviceImage.verticalCenter
+        anchors.verticalCenterOffset: deviceImage.paintedHeight * 0.086
+    }
+
+
 }
