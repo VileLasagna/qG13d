@@ -7,7 +7,7 @@ Page
 
     title: qsTr("Keys")
 
-    background: Rectangle { id: bg; anchors.fill: parent; color: "#AFAFAF"}
+    background: Rectangle { id: bg; anchors.fill: parent; color: "#4F4F4F"}
 
     property string lastButton: "None"
 
